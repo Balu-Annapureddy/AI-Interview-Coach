@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+websockets
+python-multipart
+numpy
+scipy
+torch
+openai
+python-dotenv
+faster-whisper
+textblob
