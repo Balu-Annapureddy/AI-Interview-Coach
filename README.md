@@ -1,6 +1,6 @@
 # InterviewCoach — AI-Assisted Real-Time Interview Practice Platform
 
-> **Status**: 🔵 Completed / Portfolio Maintained  
+> **Status**: 🟡 Prototype / Active Development  
 > **Target Identity**: InterviewCoach  
 > **License**: MIT License ([LICENSE](LICENSE))  
 
@@ -72,22 +72,23 @@ For complete setup instructions, see [`docs/SETUP_GUIDE.md`](docs/SETUP_GUIDE.md
 InterviewCoach/
 ├── backend/
 │   ├── tests/
-│   │   └── test_analysis.py   # Automated unit test suite (4 core tests)
-│   ├── analysis.py            # WPM, filler word, & sentiment analyzer
-│   ├── audio_processor.py     # Binary audio buffer processor
-│   ├── main.py                # FastAPI app & WebSocket endpoint
-│   ├── requirements.txt       # Python dependencies
-│   ├── stt_service.py         # Faster-Whisper speech-to-text service
-│   └── stt_service_fallback.py# Lightweight speech recognition fallback
+│   │   ├── test_analysis.py       # Speech rate & filler word unit tests
+│   │   └── test_audio_processor.py# Audio buffer & stream processing tests
+│   ├── analysis.py                # WPM, filler word, & sentiment analyzer
+│   ├── audio_processor.py         # Binary audio buffer processor
+│   ├── main.py                    # FastAPI app & WebSocket endpoint
+│   ├── requirements.txt           # Python dependencies
+│   ├── stt_service.py             # Faster-Whisper speech-to-text service
+│   └── stt_service_fallback.py    # Lightweight speech recognition fallback
 ├── frontend/
-│   ├── package.json           # React frontend dependencies
-│   ├── vite.config.ts         # Vite build configuration
-│   └── src/                   # Audio recording & live feedback UI
+│   ├── package.json               # React frontend dependencies
+│   ├── vite.config.ts             # Vite build configuration
+│   └── src/                       # Audio recording & live feedback UI
 ├── docs/
-│   └── SETUP_GUIDE.md         # Environment setup guide
-├── .env.example               # Safe environment variable configuration template
-├── LICENSE                    # MIT License
-└── README.md                  # Project documentation
+│   └── SETUP_GUIDE.md             # Environment setup guide
+├── .env.example                   # Safe environment variable configuration template
+├── LICENSE                        # MIT License
+└── README.md                      # Project documentation
 ```
 
 ---
@@ -139,7 +140,7 @@ Open `http://localhost:5173` in your browser.
 
 ## Testing
 
-Automated tests are located in `backend/tests/test_analysis.py` (4 unit tests covering WPM calculation, filler word detection, fast speech warnings, and slow speech recommendations).
+Automated unit tests are located in `backend/tests/` (6 unit tests covering WPM calculation, filler word detection, fast/slow speech recommendations, and audio stream buffer processing).
 
 Run the test suite:
 
@@ -147,6 +148,12 @@ Run the test suite:
 cd backend
 .\.venv\Scripts\python.exe -m unittest discover tests
 ```
+
+---
+
+## Security Audit Notice
+
+An audit of source files found no obvious hardcoded credentials. Configuration uses optional environment variables (`OPENAI_API_KEY`).
 
 ---
 
