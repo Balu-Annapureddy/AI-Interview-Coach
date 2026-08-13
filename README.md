@@ -1,10 +1,11 @@
-# InterviewSense — AI-Assisted Real-Time Interview Practice Platform
+# InterviewSense — AI-Assisted Interview Practice Platform
 
 > **Status**: 🟡 Prototype / Active Development  
 > **Target Identity**: InterviewSense  
 > **License**: MIT License ([LICENSE](LICENSE))  
 
 InterviewSense is a real-time speech analytics and interview practice platform built with **FastAPI**, **WebSockets**, **Faster-Whisper**, **React 18**, and **Tailwind CSS**, providing instant feedback on speech pace, filler words, tone, and delivery confidence.
+
 
 ---
 
@@ -16,7 +17,8 @@ Delivering confident interview answers requires controlling speech cadence, mini
 
 ## Why I Built It
 
-I built InterviewSense to explore real-time audio stream processing, WebSocket bi-directional communication, speech-to-text transcription pipelines, and audio signal analysis. Building InterviewSense required managing binary audio buffers, integrating local Whisper model inference, and calculating live speech metrics with sub-second feedback response times.
+I built InterviewSense to explore real-time audio stream processing, WebSocket bi-directional communication, speech-to-text transcription pipelines, and audio signal analysis. Building InterviewSense required managing binary audio buffers, integrating local Whisper model inference, and calculating live speech metrics and returning feedback through a WebSocket-based processing pipeline.
+
 
 ---
 
