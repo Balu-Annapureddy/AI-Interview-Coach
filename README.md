@@ -103,8 +103,9 @@ InterviewCoach/
 
 ```bash
 # Clone repository
-git clone https://github.com/Balu-Annapureddy/AI-Interview-Coach.git
-cd AI-Interview-Coach/backend
+git clone https://github.com/Balu-Annapureddy/InterviewCoach.git
+cd InterviewCoach/backend
+
 
 # Create virtual environment
 python -m venv .venv
