@@ -1,22 +1,22 @@
-# InterviewCoach — AI-Assisted Real-Time Interview Practice Platform
+# InterviewSense — AI-Assisted Real-Time Interview Practice Platform
 
 > **Status**: 🟡 Prototype / Active Development  
-> **Target Identity**: InterviewCoach  
+> **Target Identity**: InterviewSense  
 > **License**: MIT License ([LICENSE](LICENSE))  
 
-InterviewCoach is a real-time speech analytics and interview practice platform built with **FastAPI**, **WebSockets**, **Faster-Whisper**, **React 18**, and **Tailwind CSS**, providing instant feedback on speech pace, filler words, tone, and delivery confidence.
+InterviewSense is a real-time speech analytics and interview practice platform built with **FastAPI**, **WebSockets**, **Faster-Whisper**, **React 18**, and **Tailwind CSS**, providing instant feedback on speech pace, filler words, tone, and delivery confidence.
 
 ---
 
 ## Overview
 
-Delivering confident interview answers requires controlling speech cadence, minimizing verbal fillers, and maintaining a balanced tone. **InterviewCoach** processes live microphone audio streams via WebSockets, transcribes spoken text, calculates speaking rate (Words Per Minute - WPM), detects hesitation fillers (`um`, `uh`, `like`, `basically`), and returns instant coaching recommendations.
+Delivering confident interview answers requires controlling speech cadence, minimizing verbal fillers, and maintaining a balanced tone. **InterviewSense** processes live microphone audio streams via WebSockets, transcribes spoken text, calculates speaking rate (Words Per Minute - WPM), detects hesitation fillers (`um`, `uh`, `like`, `basically`), and returns instant coaching recommendations.
 
 ---
 
 ## Why I Built It
 
-I built InterviewCoach to explore real-time audio stream processing, WebSocket bi-directional communication, speech-to-text transcription pipelines, and audio signal analysis. Building InterviewCoach required managing binary audio buffers, integrating local Whisper model inference, and calculating live speech metrics with sub-second feedback response times.
+I built InterviewSense to explore real-time audio stream processing, WebSocket bi-directional communication, speech-to-text transcription pipelines, and audio signal analysis. Building InterviewSense required managing binary audio buffers, integrating local Whisper model inference, and calculating live speech metrics with sub-second feedback response times.
 
 ---
 
@@ -69,7 +69,7 @@ For complete setup instructions, see [`docs/SETUP_GUIDE.md`](docs/SETUP_GUIDE.md
 ## Repository Structure
 
 ```
-InterviewCoach/
+InterviewSense/
 ├── backend/
 │   ├── tests/
 │   │   ├── test_analysis.py       # Speech rate & filler word unit tests
@@ -103,9 +103,8 @@ InterviewCoach/
 
 ```bash
 # Clone repository
-git clone https://github.com/Balu-Annapureddy/InterviewCoach.git
-cd InterviewCoach/backend
-
+git clone https://github.com/Balu-Annapureddy/InterviewSense.git
+cd InterviewSense/backend
 
 # Create virtual environment
 python -m venv .venv
@@ -130,7 +129,7 @@ The FastAPI backend will start at `http://localhost:8000`.
 In a separate terminal:
 
 ```bash
-cd AI-Interview-Coach/frontend
+cd InterviewSense/frontend
 npm install
 npm run dev
 ```
